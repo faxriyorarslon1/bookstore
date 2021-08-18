@@ -1,0 +1,5 @@
+{% load i18n %}
+{% autoescape off %}
+{% blocktrans %}Ro'yxatdan o'tayotganligingizni tasdiqlang{% endblocktrans %}
+{% endautoescape %}
+

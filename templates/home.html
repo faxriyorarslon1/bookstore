@@ -1,0 +1,29 @@
+<!-- templates/home.html -->
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<div id="templatemo_content_right">
+    {% for book in book_list %}
+    <div class="templatemo_product_box row" >
+        <h1>{{ book.title }} <span>{{ book.author }}</span></h1>
+        <div style="width: 100px;" class="col-2">
+            <img src="{{ book.cover.url }}" alt="image" style="width: 100%;"/>
+        </div>
+     
+        <div class="product_info col-2">
+            
+          <h3>{{ book.price }}<span> so'm</span></h3>
+            <div class="buy_now_button"><a href="subpage.html">Sotib Olish</a></div>
+            <div class="detail_button"><a href="{{ book.get_absolute_url }}">Batafsil</a></div>
+        </div>
+    </div>      
+        <div class="cleaner_with_width">&nbsp;</div>
+    {% endfor%}
+    
+</div>
+{% endblock content %}
+
+
+
