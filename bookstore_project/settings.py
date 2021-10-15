@@ -43,14 +43,16 @@ INSTALLED_APPS = [
     'crispy_forms',
     'allauth',
     'allauth.account',
+    'rest_framework',
 
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
     'books.apps.BooksConfig',
     'orders.apps.OrdersConfig',
+    'libraryfrontend.apps.LibraryfrontendConfig'
 ]
 
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = "users.CustomUser"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
